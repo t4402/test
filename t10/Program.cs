@@ -1,35 +1,43 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text;
+using System.Xml.Linq;
 
 namespace t10
 {
-    public class Variables
+    public class FileReader
     {
         public string path;
-        public string W;
-        private string str;
 
-        public void OpenFileAndFindW()
+        public string OpenFileAndFindW()
         {
-            using (StreamReader sr = new StreamReader(path, Encoding.Default))
-            {
-                while (!sr.EndOfStream)
-                {
-                    str = sr.ReadLine();
-                    FindWInStr();
-                }
-            }
-        }
+            //using (StreamReader sr = new StreamReader(path, Encoding.Default))
+            //{
+            //    while (!sr.EndOfStream)
+            //    {
+            //        return sr.ReadLine();
+            //    }
+            //}
+            //return "";
 
-        private void FindWInStr()
+            string[] lines = File.ReadAllLines(path);
+            foreach (string s in lines)
+            {
+                return s;
+            }
+            return "";
+        }
+    }
+
+    class Finder
+    {
+        public string str;
+        public string W;
+
+        public void Finders()
         {
             if (str.IndexOf(W) != -1)
-                PrintStr();
-        }
-
-        private void PrintStr()
-        {
-            Console.WriteLine(str);
+                Console.WriteLine(str);
         }
     }
 
@@ -37,11 +45,12 @@ namespace t10
     {
         static void Main(string[] args)
         {
-            var obj = new Variables();
+            var obj = new FileReader();
+            var obj2 = new Finder();
             obj.path = GetStr("Введите название файла вместе с путем: ");
-            obj.W = GetStr("Введите слово, которое будем искать: ");
-
-            obj.OpenFileAndFindW();
+            obj2.W = GetStr("Введите слово, которое будем искать: ");
+            obj2.str = obj.OpenFileAndFindW();
+            obj2.Finders();
         }
 
         private static string GetStr(string txt)
@@ -50,7 +59,5 @@ namespace t10
             string path = Console.ReadLine();
             return path;
         }
-
-
     }
 }

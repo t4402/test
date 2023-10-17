@@ -1,0 +1,14 @@
+C:\Users\spsergeev\source\repos\t11\bin\Debug\net7.0\t11.exe
+C:\Users\spsergeev\source\repos\t11\bin\Debug\net7.0\t11.deps.json
+C:\Users\spsergeev\source\repos\t11\bin\Debug\net7.0\t11.runtimeconfig.json
+C:\Users\spsergeev\source\repos\t11\bin\Debug\net7.0\t11.dll
+C:\Users\spsergeev\source\repos\t11\bin\Debug\net7.0\t11.pdb
+C:\Users\spsergeev\source\repos\t11\obj\Debug\net7.0\t11.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\spsergeev\source\repos\t11\obj\Debug\net7.0\t11.AssemblyInfoInputs.cache
+C:\Users\spsergeev\source\repos\t11\obj\Debug\net7.0\t11.AssemblyInfo.cs
+C:\Users\spsergeev\source\repos\t11\obj\Debug\net7.0\t11.csproj.CoreCompileInputs.cache
+C:\Users\spsergeev\source\repos\t11\obj\Debug\net7.0\t11.dll
+C:\Users\spsergeev\source\repos\t11\obj\Debug\net7.0\refint\t11.dll
+C:\Users\spsergeev\source\repos\t11\obj\Debug\net7.0\t11.pdb
+C:\Users\spsergeev\source\repos\t11\obj\Debug\net7.0\t11.genruntimeconfig.cache
+C:\Users\spsergeev\source\repos\t11\obj\Debug\net7.0\ref\t11.dll

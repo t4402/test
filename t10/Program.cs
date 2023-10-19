@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.IO;
+using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Xml.Linq;
 
@@ -10,25 +11,28 @@ namespace t10
     {
         public string path;
 
-        public string[] FileRead() 
+        public IEnumerator<string> GetEnumerator()
         {
-            string[] lines = File.ReadAllLines(path);
-            return lines;
+            using (StreamReader sr = new StreamReader(path))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    yield return line;
+                }
+            }
         }
     }
 
     class Finder
     {
-        public string[] lines;
+        public string lines;
         public string W;
 
         public void Finders()
         {
-            foreach (var item in lines)
-            {
-                if (item.IndexOf(W) != -1)
-                    Console.WriteLine(item);
-            }
+            if (lines.IndexOf(W) != -1)
+                Console.WriteLine(lines);
         }
     }
 
@@ -40,8 +44,13 @@ namespace t10
             var obj2 = new Finder();
             obj.path = GetStr("Введите название файла вместе с путем: ");
             obj2.W = GetStr("Введите слово, которое будем искать: ");
-            obj2.lines = obj.FileRead();
-            obj2.Finders();
+            
+
+            foreach (var n in obj)
+            {
+                obj2.lines = n;
+                obj2.Finders();
+            }
         }
 
         private static string GetStr(string txt)

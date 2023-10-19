@@ -40,3 +40,17 @@ D:\Delo\Test\t10\bin\Debug\net7.0\t10.dll
 D:\Delo\Test\t10\bin\Debug\net7.0\t10.pdb
 D:\Delo\Test\t10\obj\Debug\net7.0\t10.genruntimeconfig.cache
 D:\Delo\Test\t10\obj\Debug\net7.0\ref\t10.dll
+D:\Test\t10\bin\Debug\net7.0\t10.exe
+D:\Test\t10\bin\Debug\net7.0\t10.deps.json
+D:\Test\t10\bin\Debug\net7.0\t10.runtimeconfig.json
+D:\Test\t10\bin\Debug\net7.0\t10.dll
+D:\Test\t10\bin\Debug\net7.0\t10.pdb
+D:\Test\t10\obj\Debug\net7.0\t10.GeneratedMSBuildEditorConfig.editorconfig
+D:\Test\t10\obj\Debug\net7.0\t10.AssemblyInfoInputs.cache
+D:\Test\t10\obj\Debug\net7.0\t10.AssemblyInfo.cs
+D:\Test\t10\obj\Debug\net7.0\t10.csproj.CoreCompileInputs.cache
+D:\Test\t10\obj\Debug\net7.0\t10.dll
+D:\Test\t10\obj\Debug\net7.0\refint\t10.dll
+D:\Test\t10\obj\Debug\net7.0\t10.pdb
+D:\Test\t10\obj\Debug\net7.0\t10.genruntimeconfig.cache
+D:\Test\t10\obj\Debug\net7.0\ref\t10.dll

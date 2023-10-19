@@ -1,20 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Delo\\Test\\t11\\t11.csproj": {}
+    "D:\\Test\\t11\\t11.csproj": {}
   },
   "projects": {
-    "D:\\Delo\\Test\\t11\\t11.csproj": {
+    "D:\\Test\\t11\\t11.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Delo\\Test\\t11\\t11.csproj",
+        "projectUniqueName": "D:\\Test\\t11\\t11.csproj",
         "projectName": "t11",
-        "projectPath": "D:\\Delo\\Test\\t11\\t11.csproj",
+        "projectPath": "D:\\Test\\t11\\t11.csproj",
         "packagesPath": "C:\\Users\\Sergey\\.nuget\\packages\\",
-        "outputPath": "D:\\Delo\\Test\\t11\\obj\\",
+        "outputPath": "D:\\Test\\t11\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\Sergey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

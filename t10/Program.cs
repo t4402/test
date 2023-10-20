@@ -9,7 +9,8 @@ namespace t10
 {
     public class FileReader
     {
-        public string path;
+        private string path;
+        public FileReader(string n) { path = n; }
 
         public IEnumerator<string> GetEnumerator()
         {
@@ -26,13 +27,16 @@ namespace t10
 
     class Finder
     {
-        public string lines;
-        public string W;
+        private string lines;
+        private string W;
 
-        public void Finders()
+        public Finder(string lines, string W) { this.lines = lines; this.W = W; }
+
+        public string Find(string lines, string W)
         {
             if (lines.IndexOf(W) != -1)
-                Console.WriteLine(lines);
+                return lines;
+            else return null;
         }
     }
 
@@ -40,16 +44,18 @@ namespace t10
     {
         static void Main(string[] args)
         {
-            var obj = new FileReader();
-            var obj2 = new Finder();
-            obj.path = GetStr("Введите название файла вместе с путем: ");
-            obj2.W = GetStr("Введите слово, которое будем искать: ");
+            var obj = new FileReader(GetStr("Введите название файла вместе с путем: "));
+            string W = GetStr("Введите слово, которое будем искать: ");
+            var obj2 = new Finder("","");
             
 
             foreach (var n in obj)
             {
-                obj2.lines = n;
-                obj2.Finders();
+                var text = obj2.Find(n, W);
+                if (text != null) 
+                {
+                    Console.WriteLine(text);
+                };
             }
         }
 

@@ -4,13 +4,17 @@ using System.IO;
 using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace t10
 {
     public class FileReader
     {
         private string path;
-        public FileReader(string n) { path = n; }
+        public FileReader(string n) 
+        { 
+            path = n; 
+        }
 
         public IEnumerator<string> GetEnumerator()
         {
@@ -27,16 +31,19 @@ namespace t10
 
     class Finder
     {
-        private string lines;
-        private string W;
+        private string _line;
+        private string _wordToSearch;
 
-        public Finder(string lines, string W) { this.lines = lines; this.W = W; }
+        public Finder(string line, string wordToSearch) 
+        { 
+            _line = line;
+            _wordToSearch = wordToSearch; 
+        }
 
-        public string Find(string lines, string W)
+        public void Find(string _line, string _wordToSearch)
         {
-            if (lines.IndexOf(W) != -1)
-                return lines;
-            else return null;
+            if (_line.IndexOf(_wordToSearch) != -1)
+                Console.WriteLine(_line);
         }
     }
 
@@ -44,18 +51,13 @@ namespace t10
     {
         static void Main(string[] args)
         {
-            var obj = new FileReader(GetStr("Введите название файла вместе с путем: "));
-            string W = GetStr("Введите слово, которое будем искать: ");
-            var obj2 = new Finder("","");
+            var fileReader = new FileReader(GetStr("Введите название файла вместе с путем: "));
+            string word = GetStr("Введите слово, которое будем искать: ");
+            var finder = new Finder("","");
             
-
-            foreach (var n in obj)
+            foreach (var n in fileReader)
             {
-                var text = obj2.Find(n, W);
-                if (text != null) 
-                {
-                    Console.WriteLine(text);
-                };
+                finder.Find(n, word);
             }
         }
 
